@@ -1,0 +1,43 @@
+{
+	"users": [
+			{
+					"name": "luan",
+					"password": "secret",
+					"tags": "administrator"
+			}
+	],
+	"vhosts": [
+			{
+					"name": "/"
+			}
+	],
+	"exchanges": [
+		{
+			"name": "tests_event",
+			"vhost": "/",
+			"type": "fanout",
+			"durable": true,
+			"auto_delete": false,
+			"internal": false,
+			"arguments": {}
+		}
+	],
+	"permissions": [
+			{
+					"user": "luan",
+					"vhost": "/",
+					"configure": ".*",
+					"write": ".*",
+					"read": ".*"
+			}
+	],
+	"queues": [
+			{
+					"name": "test_queue",
+					"vhost": "/",
+					"durable": true,
+					"auto_delete": false,
+					"arguments": {}
+			}
+	]
+}
